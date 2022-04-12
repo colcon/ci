@@ -18,8 +18,10 @@ runs:
         echo ::endgroup::
 
         echo ::group::Install dependencies
+        # Remove this package from constraints
+        grep -v "^$(python setup.py --name)@" ${GITHUB_ACTION_PATH}/constraints.txt > constraints.txt
         # Install dependencies, including any 'test' extras, as well as pytest-cov
-        python -m pip install -U -e .[test] pytest-cov -c ${{github.action_path}}/constraints.txt
+        python -m pip install -U -e .[test] pytest-cov -c constraints.txt
         echo ::endgroup::
 
         echo ::group::Run tests
