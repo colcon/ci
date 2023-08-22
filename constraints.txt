@@ -5,6 +5,7 @@ colcon-bazel@ git+https://github.com/colcon/colcon-bazel.git
 colcon-bundle@ git+https://github.com/colcon/colcon-bundle.git
 colcon-cargo@ git+https://github.com/colcon/colcon-cargo.git
 colcon-cd@ git+https://github.com/colcon/colcon-cd.git
+colcon-clean@ git+https://github.com/colcon/colcon-clean.git
 colcon-cmake@ git+https://github.com/colcon/colcon-cmake.git
 colcon-common-extensions@ git+https://github.com/colcon/colcon-common-extensions.git
 colcon-core@ git+https://github.com/colcon/colcon-core.git
@@ -14,12 +15,15 @@ colcon-devtools@ git+https://github.com/colcon/colcon-devtools.git
 colcon-ed@ git+https://github.com/colcon/colcon-ed.git
 colcon-gradle@ git+https://github.com/colcon/colcon-gradle.git
 colcon-graphviz-anim@ git+https://github.com/colcon/colcon-graphviz-anim.git
+colcon-hardware-acceleration@ git+https://github.com/colcon/colcon-hardware-acceleration.git
 colcon-installed-package-information@ git+https://github.com/colcon/colcon-installed-package-information.git
 colcon-lcov-result@ git+https://github.com/colcon/colcon-lcov-result.git
 colcon-library-path@ git+https://github.com/colcon/colcon-library-path.git
+colcon-meson@ git+https://github.com/colcon/colcon-meson.git
 colcon-metadata@ git+https://github.com/colcon/colcon-metadata.git
 colcon-mixin@ git+https://github.com/colcon/colcon-mixin.git
 colcon-notification@ git+https://github.com/colcon/colcon-notification.git
+colcon-output@ git+https://github.com/colcon/colcon-output.git
 colcon-override-check@ git+https://github.com/colcon/colcon-override-check.git
 colcon-package-information@ git+https://github.com/colcon/colcon-package-information.git
 colcon-package-selection@ git+https://github.com/colcon/colcon-package-selection.git
@@ -32,6 +36,7 @@ colcon-rerun@ git+https://github.com/colcon/colcon-rerun.git
 colcon-ros-bazel@ git+https://github.com/colcon/colcon-ros-bazel.git
 colcon-ros-bundle@ git+https://github.com/colcon/colcon-ros-bundle.git
 colcon-ros-cargo@ git+https://github.com/colcon/colcon-ros-cargo.git
+colcon-ros-domain-id-coordinator@ git+https://github.com/colcon/colcon-ros-domain-id-coordinator.git
 colcon-ros@ git+https://github.com/colcon/colcon-ros.git
 colcon-ros-gradle@ git+https://github.com/colcon/colcon-ros-gradle.git
 colcon-sanitizer-reports@ git+https://github.com/colcon/colcon-sanitizer-reports.git
