@@ -57,5 +57,5 @@ jobs:
           repository: ${{ inputs.setup-repository }}
           path: ./.github-ci-action-repo
       - uses: ./.github-ci-action-repo
-      - uses: codecov/codecov-action@v3
+      - uses: codecov/codecov-action@v4
         if: ${{ inputs.codecov }}
