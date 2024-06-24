@@ -49,7 +49,7 @@ jobs:
     strategy: ${{ fromJson(needs.setup.outputs.strategy) }}
     runs-on: ${{ matrix.os }}
     env:
-      HAVE_CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN != null }}
+      HAVE_CODECOV_TOKEN: ${{ contains(toJson(secrets), 'CODECOV_TOKEN') }}
 
     steps:
       - uses: actions/checkout@v4
