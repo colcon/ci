@@ -48,6 +48,8 @@ jobs:
     needs: [setup]
     strategy: ${{ fromJson(needs.setup.outputs.strategy) }}
     runs-on: ${{ matrix.os }}
+    env:
+      HAVE_CODECOV_TOKEN: ${{ contains(toJson(secrets), 'CODECOV_TOKEN') }}
 
     steps:
       - uses: actions/checkout@v4
@@ -66,4 +68,4 @@ jobs:
       - uses: codecov/codecov-action@v4
         env:
           CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
-        if: ${{ env.CODECOV_TOKEN != '' }}
+        if: ${{ env.HAVE_CODECOV_TOKEN == 'true' }}
