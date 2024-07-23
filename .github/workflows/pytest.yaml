@@ -25,6 +25,11 @@ on:  # yamllint disable-line rule:truthy
         default: 'colcon/ci'
         required: false
         type: string
+      prerun-step:
+        description: 'instruction to run before the testing'
+        default: ''
+        required: false
+        type: string
     secrets:
       CODECOV_TOKEN:
         description: 'token to use when running codecov action after testing'
@@ -53,6 +58,8 @@ jobs:
       - uses: actions/checkout@v4
         with:
           repository: ${{ inputs.repository }}
+      - run: bash -c "${{ inputs.prerun-step }}"
+        if: ${{ inputs.prerun-step != ''}}
       - uses: actions/setup-python@v5
         with:
           python-version: ${{ matrix.python }}
